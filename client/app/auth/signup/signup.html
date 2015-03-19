@@ -1,0 +1,56 @@
+<div layout="row">
+  <div flex="25"></div>
+  <div flex="50" class="signupBox md-whiteframe-z2">
+    <div layout="column">
+      <md-content style="opacity: 0.8">
+        <md-toolbar>
+        <div layout="row" class="authHeader">
+          <div flex="30"></div>
+          <div flex="50" layout-align="center">
+            <h2 class="md-toolbar-tools" ng-model="user.title">
+              <span>{{user.title}}</span>
+            </h2>
+          </div>
+          <div flex="20"></div>
+        </div>
+        </md-toolbar>
+      </md-content>
+      <md-content class="md-padding">
+        <form name="userForm">
+          <div layout layout-sm="column">
+          <md-input-container style="width:50%" class="md-accent">
+            <label>Username</label>
+            <input ng-model="user.username">
+          </md-input-container>
+          <md-input-container style="width:50%" class="md-accent">
+            <label>Password</label>
+            <input ng-model="user.password" type="password">
+          </md-input-container>
+          </div>
+          <div layout layout-sm="column">
+            <div flex="30">
+              <div>
+                <a ui-sref="app.login"><md-button class="md-raised" ng-click="register()" type="submit">Already Registered?</md-button></a>
+              </div>
+            </div>
+            <div flex="30" align="center">
+              <md-button class="md-raised buttonBackFB" ng-click="loginFacebook()" aria-label="facebook"></md-button>
+              <md-button class="md-raised buttonBackG" ng-click="loginGoogle()" aria-label="google+"></md-button>
+            </div>
+            <div flex="25">
+              <div layout="row" layout-align="end center">
+                <md-checkbox class="checkbox checkboxAuth" ng-model="data.cb1" aria-label="Checkbox 1">Remember me</md-checkbox>  
+              </div>
+            </div>
+            <div flex="15">
+              <div layout="row" layout-align="end center">
+                <md-button class="md-raised" ng-click="register()" type="submit">Submit</md-button> 
+              </div>
+            </div>
+          </div>
+        </form>
+      </md-content>
+    </div>
+  </div>
+  <div flex="25"></div>
+</div>
